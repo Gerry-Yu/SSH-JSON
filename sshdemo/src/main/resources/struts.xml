@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+        "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+    <!-- <constant name="struts.objectFactory.spring.autoWire" value="name"/>-->
+
+    <package name="default" extends="struts-default">
+
+    </package>
+
+    <package name="jsonPackage" extends="json-default">
+        <action name="queryUserAction" class="com.demo.action.QueryUserAction">
+            <result type="json"></result>
+        </action>
+        <action name="addUserAction" class="com.demo.action.AddUserAction">
+            <result type="json"></result>
+        </action>
+    </package>
+</struts>
